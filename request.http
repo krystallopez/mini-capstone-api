@@ -2,7 +2,7 @@
 GET http://localhost:3000/products
 
 ### Products show action 
-GET http://localhost:3000/products/5
+GET http://localhost:3000/products/10.json
 
 ### Recipe create action
 POST http://localhost:3000/products 

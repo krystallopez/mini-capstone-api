@@ -7,8 +7,8 @@ class ProductsController < ApplicationController
 
   def show
     product_id = params["id"]
-    product = Product.find_by(id: product_id)
-    render json: product.as_json(methods: [:friendly_created_at, :is_discounted?, :tax, :total])
+    @product = Product.find_by(id: params[:id])
+    render template: "products/show"
   end 
 
   def create
@@ -21,11 +21,14 @@ class ProductsController < ApplicationController
     )
     
     if product.save
-      render json: product.as_json
+      @product = product
+      render template: "products/show "
     else
       render json: {errors: product.errors.full_messages}, status: 422
     end
   end
+
+
 
   def update 
     product_id = params["id"]
@@ -38,7 +41,8 @@ class ProductsController < ApplicationController
   
   
     if product.save
-      render json: product.as_json
+      @product = product
+      render template: "products/show"
     else
       render json: {errors: product.errors.full_messages}, status: 422
     end
