@@ -19,8 +19,12 @@ class ProductsController < ApplicationController
       description: params[:description],
       
     )
-    product.save
-    render json: product.as_json
+    
+    if product.save
+      render json: product.as_json
+    else
+      render json: {errors: product.errors.full_messages}, status: 422
+    end
   end
 
   def update 
@@ -33,8 +37,11 @@ class ProductsController < ApplicationController
     product.description = params["description"] || product.description
   
   
-    product.save
-    render json: product.as_json
+    if product.save
+      render json: product.as_json
+    else
+      render json: {errors: product.errors.full_messages}, status: 422
+    end
   end
 
   def destroy 

@@ -2,17 +2,17 @@
 GET http://localhost:3000/products
 
 ### Products show action 
-GET http://localhost:3000/products/4
+GET http://localhost:3000/products/5
 
 ### Recipe create action
 POST http://localhost:3000/products 
 Content-Type: application/json
 
 {
-  "name": "Star Wars: Knights of the Old Republic",
-  "price": 39.99,
-  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaS5R0nj2xW7l5jcA6AXUbqxbMkWaQtU4-BQ&usqp=CAU",
-  "description":"It's 400 years before the Galactic Empire. Many Jedi Knights have fallen in the battle the Ruthless Sith. You are the Jedi's last hope. Can you master the power of the Force and save the Galaxy and the Republic? Or will you be seduced by the Dark Side?"
+  "name": "God of War",
+  "price": 19.99
+  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-nA20vG5rJcSOYtHA0e4rMfQaJ1jfIWzlFQ&usqp=CAU",
+  "description":"Play as Kratos, a Spartan warrior who is sent by the Greek Gods to kill Ares, the god of war."
 }
 
 ### Product update action 
@@ -21,11 +21,11 @@ Content-Type: application/json
 
 { 
   "name": "Lego Batman",
-  "price": 39.99,
+  "price": 9.99,
   "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUYvhDfnseg0ZgqC1wjI3rJCSENoehYvwMtA&usqp=CAU",
   "description": "Play as a group of Lego characters through the world that is the Batman universe. Players can use both hereos and villains."
  
 }
 
 ### Product delete action 
-DELETE http://localhost:3000/products/3
+DELETE http://localhost:3000/products/9
