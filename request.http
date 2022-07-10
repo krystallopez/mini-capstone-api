@@ -1,5 +1,5 @@
 ### Products index action
-GET http://localhost:3000/products
+GET http://localhost:3000/products.json
 
 ### Products show action 
 GET http://localhost:3000/products/10.json
@@ -10,9 +10,10 @@ Content-Type: application/json
 
 {
   "name": "God of War",
-  "price": 19.99
+  "price": 19.99,
   "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-nA20vG5rJcSOYtHA0e4rMfQaJ1jfIWzlFQ&usqp=CAU",
   "description":"Play as Kratos, a Spartan warrior who is sent by the Greek Gods to kill Ares, the god of war."
+  
 }
 
 ### Product update action 

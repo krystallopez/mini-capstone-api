@@ -7,4 +7,21 @@ Product.create({ name: "Horizon Zero Dawn", price: 59.99, image_url: "https://en
 
 Product.create({ name: "Star Wars: Jedi Fallen Order", price: 19.99, image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmebWqvp51fffPxja2ZXN4IsgYkwOmxYsuGg&usqp=CAU", description: "Star Wars: Jedi Fallen Order is action-packed adventure game. Set after the events of Episode III: Revenge of the Sith, you play as former Jedi padawan Cal Kestis. Develop your force abilities, hone your lightsaber techniques, and explore ancient mysteries of a long-losy civilization - all while trying to stay one step in front of Darth Vader and his deadly inquisitors." })
 
+
+Supplier.create({ name: "Bioware", email: "distribution@test.com", phone_number: "(800)555-4576"})
+
+Supplier.create({name: "Guerilla", email: "shipping@test.com", phone_number: "(855)402-5698"})
+
+Supplier.create({name: "Respawn Entertainment", email: "shipping@test.com", phone_number: "(800)347-4466"})
+
+Supplier.create({name: "Sony Interactive Entertainment", email: "sonyproducts@test.com", phone_number:"(855)768-9587"})
+
+Supplier.create({name: "Bungie", email: "bungiesales@test.com", phone_number: "(800)255-7648"})
+
+Supplier.create({name: "Feral Interactive", email: "feralintsales@test.com", phone_number: "(855)369-7324"})
+
+
+
 puts "Done."
+
+
