@@ -15,8 +15,8 @@ class ProductsController < ApplicationController
     product = Product.new( 
       name: params[:name],
       price: params[:price],
-      image_url: params[:image_url],
-      description: params[:description]
+      description: params[:description],
+      supplier_id: params[:supplier_id]
       
     )
     
@@ -33,12 +33,10 @@ class ProductsController < ApplicationController
   def update 
     product_id = params["id"]
     product = Product.find_by(id: product_id)
-
-    product.name = params["name"] || product.name
-    product.price = params["price"] || product.price
-    product.image_url = params["image_url"] || product.image_url
-    product.description = params["description"] || product.description
-  
+    product.name = params[:name] || product.name
+    product.price = params[:price] || product.price
+    product.description = params[:description] || product.description
+    product.supplier_id = params[:supplier_id] || product.supplier_id
   
     if product.save
       @product = product

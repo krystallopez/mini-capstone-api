@@ -2,31 +2,41 @@
 GET http://localhost:3000/products.json
 
 ### Products show action 
-GET http://localhost:3000/products/10.json
+GET http://localhost:3000/products/5.json
 
-### Recipe create action
-POST http://localhost:3000/products 
+### Product create action
+POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "God of War",
+  "name": "God of War 4",
   "price": 19.99,
-  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-nA20vG5rJcSOYtHA0e4rMfQaJ1jfIWzlFQ&usqp=CAU",
-  "description":"Play as Kratos, a Spartan warrior who is sent by the Greek Gods to kill Ares, the god of war."
+  "description":"Play as Kratos, a Spartan warrior who is sent by the Greek Gods to kill Ares, the god of war.",
+  "supplier_id": 4
   
+}
+### Images create saction
+POST http://localhost:3000/images
+Content-Type: application/json
+
+{
+"product_id": 6, 
+"url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-nA20vG5rJcSOYtHA0e4rMfQaJ1jfIWzlFQ&usqp=CAU"
+
+
 }
 
 ### Product update action 
-PATCH http://localhost:3000/products/5
+PATCH http://localhost:3000/products/6
 Content-Type: application/json
 
 { 
   "name": "Lego Batman",
   "price": 9.99,
-  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUYvhDfnseg0ZgqC1wjI3rJCSENoehYvwMtA&usqp=CAU",
+  "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUYvhDfnseg0ZgqC1wjI3rJCSENoehYvwMtA&usqp=CAU",
   "description": "Play as a group of Lego characters through the world that is the Batman universe. Players can use both hereos and villains."
  
 }
 
 ### Product delete action 
-DELETE http://localhost:3000/products/9
+DELETE http://localhost:3000/products/5

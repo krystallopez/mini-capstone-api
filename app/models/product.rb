@@ -1,25 +1,30 @@
 class Product < ApplicationRecord
-  validates  :name, presence: true 
+  validates :name, presence: true
   validates :name, uniqueness: true
-  validates  :price, presence: true
-  validates :price, numericality: {greater_than: 0}
+  validates :price, presence: true
+  validates :price, numericality: { greater_than: 0 }
   validates :description, presence: true
-  validates :description, length: {in: 10..500}
+  validates :description, length: { in: 10..500 }
 
-  def friendly_created_at 
+  belongs_to :supplier
+  has_many :images
+  # def supplier
+  #   Supplier.find_by(id: supplier_id)
+  # end
+
+  def friendly_created_at
     created_at.strftime("%B %e, %Y")
   end
 
   def is_discounted?
     price <= 10
-  end 
-  
+  end
+
   def tax
     price * 0.09
-  end 
+  end
 
   def total
-    price + tax 
-  end 
-    
+    price + tax
+  end
 end
