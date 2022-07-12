@@ -15,16 +15,6 @@ Content-Type: application/json
   "supplier_id": 4
   
 }
-### Images create saction
-POST http://localhost:3000/images
-Content-Type: application/json
-
-{
-"product_id": 6, 
-"url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-nA20vG5rJcSOYtHA0e4rMfQaJ1jfIWzlFQ&usqp=CAU"
-
-
-}
 
 ### Product update action 
 PATCH http://localhost:3000/products/6
@@ -40,3 +30,13 @@ Content-Type: application/json
 
 ### Product delete action 
 DELETE http://localhost:3000/products/9
+
+### Images create saction
+POST http://localhost:3000/images
+Content-Type: application/json
+
+{
+"product_id": 6, 
+"url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-nA20vG5rJcSOYtHA0e4rMfQaJ1jfIWzlFQ&usqp=CAU"
+
+}
