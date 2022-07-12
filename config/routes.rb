@@ -8,6 +8,10 @@ Rails.application.routes.draw do
 
 
   #images 
-# post "images/products/:id" => 
+  #post "/images" => "images#create"
+
+  #users
+  post "/users" => "users#create"
+   
   
 end

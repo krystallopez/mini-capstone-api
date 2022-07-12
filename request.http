@@ -40,3 +40,14 @@ Content-Type: application/json
 "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-nA20vG5rJcSOYtHA0e4rMfQaJ1jfIWzlFQ&usqp=CAU"
 
 }
+
+### User create 
+POST http://localhost:3000/users.json 
+Content-Type: application/json
+
+{
+  "name": "Krystal",
+  "email": "krystal@test.com",
+  "password": "bananas",
+  "password_confirmation": "bananas"
+}
