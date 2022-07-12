@@ -1,5 +1,7 @@
 ### Products index action
 GET http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTc2Nzc2MDV9.oWMLAJ29vWAgGvHn0K_0G-s-0Z69FlIQL9dxJjFcSwM
+
 
 ### Products show action 
 GET http://localhost:3000/products/5.json
