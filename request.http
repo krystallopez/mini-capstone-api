@@ -19,14 +19,15 @@ Content-Type: application/json
 }
 
 ### Product update action 
-PATCH http://localhost:3000/products/6
+PATCH http://localhost:3000/products/5.json
 Content-Type: application/json
 
 { 
-  "name": "Lego Batman",
-  "price": 9.99,
-  "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUYvhDfnseg0ZgqC1wjI3rJCSENoehYvwMtA&usqp=CAU",
-  "description": "Play as a group of Lego characters through the world that is the Batman universe. Players can use both hereos and villains."
+  "name": "Horizon Forbidden West",
+  "price": 59.99,
+  "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ3gqDNgW5cC8HC9Q9pAwo2mrnQAJ8ixliOg&usqp=CAU",
+  "description": "A sequel to 2017's Horizon Zero Dawn, the game is set in a post-apocalyptic version of the Western United States recovering from the aftermath of an extinction event caused by a rogue robot swarm. The player can explore the open world and complete quests using ranged and melee against hostile machine creatures.",
+  "supplier_id": 2
  
 }
 
@@ -34,7 +35,7 @@ Content-Type: application/json
 DELETE http://localhost:3000/products/9
 
 ### Images create saction
-POST http://localhost:3000/images
+POST http://localhost:3000/images.json
 Content-Type: application/json
 
 {
@@ -42,6 +43,8 @@ Content-Type: application/json
 "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-nA20vG5rJcSOYtHA0e4rMfQaJ1jfIWzlFQ&usqp=CAU"
 
 }
+
+
 
 ### User create 
 POST http://localhost:3000/users.json 

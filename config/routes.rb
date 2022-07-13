@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
 
   #images 
-  #post "/images" => "images#create"
+  post "/images" => "images#create"
 
   #users
   post "/users" => "users#create"
