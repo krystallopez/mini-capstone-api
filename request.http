@@ -1,4 +1,6 @@
-### Products index action
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTc4NDU2Nzh9.oV_j0YTKkXEoiOFWa5Op1YE9h3NXSAfzvECrPxkwarw
+
+### Products index actiion
 GET http://localhost:3000/products.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTc2Nzc2MDV9.oWMLAJ29vWAgGvHn0K_0G-s-0Z69FlIQL9dxJjFcSwM
 
@@ -9,12 +11,13 @@ GET http://localhost:3000/products/5.json
 ### Product create action
 POST http://localhost:3000/products.json
 Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
 {
-  "name": "God of War 4",
-  "price": 19.99,
-  "description":"Play as Kratos, a Spartan warrior who is sent by the Greek Gods to kill Ares, the god of war.",
-  "supplier_id": 4
+  "name": "TEST PRODUCT 2",
+  "price": 0.99,
+  "description": "THIS IS A TEST PRODUCT.",
+  "supplier_id": 1
   
 }
 
@@ -65,3 +68,30 @@ Content-Type: application/json
   "email": "krystal@test.com",
   "password": "bananas"
 }
+
+
+### Orders create
+POST http://localhost:3000/orders.json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+{
+  
+  "product_id": 5,
+  "quantity": 1
+  
+
+}
+
+### Orders show 
+GET http://localhost:3000/orders/1.json
+Content-Type: application/json
+
+### Orders index
+GET http://localhost:3000/orders.json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+### Orders delete
+DELETE http://localhost:3000/orders/4.json
+Content-Type: application/json
+
+

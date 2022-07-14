@@ -1,9 +1,13 @@
 class ProductsController < ApplicationController
-
+  before_action :authenticate_admin, except: [:index , :show]
+  
   def index
-    pp current_user
-    @products = Product.all
-    render template: "products/index"
+    if current_user
+      @products = Product.all
+      render template: "products/index"
+    else
+      render json: {message: "log in!"}
+    end
   end 
 
   def show
