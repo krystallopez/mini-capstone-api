@@ -8,12 +8,11 @@ class Product < ApplicationRecord
 
   belongs_to :supplier
   has_many :images
-  has_many :orders
   has_many :category_products
-  has_many :categories, through: :category_product
-  # def supplier
-  #   Supplier.find_by(id: supplier_id)
-  # end
+  has_many :categories, through: :category_products
+  has_many :carted_products
+  has_many :orders, through: :carted_products 
+
 
   def friendly_created_at
     created_at.strftime("%B %e, %Y")
